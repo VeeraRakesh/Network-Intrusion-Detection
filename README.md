@@ -30,10 +30,10 @@ The increasing occurrence of network attacks poses a significant challenge for n
 
 The objectives of this project are as follows:
 
-    Monitor network traffic flow in real-time to detect any malicious activities.
-    Prevent abuse and overload from bandwidth and Denial of Service (DoS) attacks.
-    Develop a reliable and efficient intrusion detection system for Windows-based operating systems.
-    Educate household internet users about the benefits of having an intrusion detection system alongside firewall and antivirus protection.
+   - Monitor network traffic flow in real-time to detect any malicious activities.
+   - Prevent abuse and overload from bandwidth and Denial of Service (DoS) attacks.
+   - Develop a reliable and efficient intrusion detection system for Windows-based operating systems.
+   - Educate household internet users about the benefits of having an intrusion detection system alongside firewall and antivirus protection.
 
 # Literature Review
 
@@ -75,44 +75,44 @@ The Intrusion Detection System using machine learning-based approaches has prove
 
 The Intrusion Detection System (IDS) is designed to detect network intrusions and classify network activities as normal or anomalous. It utilizes the xGBoost classifier and the Decision Tree algorithm for classification. Before using the system, you need to follow the steps outlined below:
 
-Step 1: Download the Dataset
+# Step 1: Download the Dataset
 
 Download the dataset required for training and testing the Intrusion Detection System from the following link: networkintrusion.csv
 
-Step 2: Load the Dataset
+# Step 2: Load the Dataset
 
 First, ensure you have the necessary Python libraries installed, including NumPy, Pandas, Scikit-learn, and XGBoost. Next, run the provided code to load the dataset and summarize its content.
 
-Step 3: Data Pre-processing and Cleaning
+# Step 3: Data Pre-processing and Cleaning
 
 The dataset may contain missing values, duplicate rows, and irrelevant features. Run the provided code for data pre-processing and cleaning:
 
-    Convert categorical variables to numerical representation:
+   - Convert categorical variables to numerical representation:
         The 'protocol_type', 'service', 'flag', and 'class' columns are converted to numerical values.
 
-    Remove duplicate rows from the loaded dataset.
+   - Remove duplicate rows from the loaded dataset.
 
-    Handle missing values:
+   - Handle missing values:
         Check for missing values using print(df.isnull().sum()).
         Drop rows with missing values using df.dropna(how='any', inplace=True).
 
-    Remove columns/features with low variance (quasi-constant features) and highly correlated columns:
+   - Remove columns/features with low variance (quasi-constant features) and highly correlated columns:
         Remove features with low variance using VarianceThreshold.
         Remove highly correlated columns using the correlation matrix.
 
-Step 4: Split the Dataset
+# Step 4: Split the Dataset
 
 Split the pre-processed dataset into training and testing sets using the provided code.
 
-Step 5: Train the Model
+# Step 5: Train the Model
 
 Use the Decision Tree algorithm to train the Intrusion Detection System using the training dataset. The training accuracy will be displayed.
 
-Step 6: Test the Model
+# Step 6: Test the Model
 
 Test the trained model using the testing dataset to evaluate its performance. The testing accuracy will be displayed.
 
-Step 7: Optional - Try xGBoost Classifier
+# Step 7: Optional - Try xGBoost Classifier
 
 If you want to try an alternative classifier, you can use the xGBoost Classifier. The training and testing accuracies will be displayed.
 
